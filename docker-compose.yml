@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: dannyben/redirector
+    ports: ["3000:3000"]
+    volumes: ['./config.ru:/app/config.ru']
+    environment:
+      REDIRECT1: 1.local==!https://www.google.com
+      REDIRECT2: 2.local==https://github.com
