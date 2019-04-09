@@ -17,12 +17,13 @@ Usage
 ### Configure Redirects
 
 Use `REDIRECT*` environment variables to configure redirects. The value 
-of each such variable should be in the syntax of `domain==target`. 
+of each such variable should be in the syntax of `source==target`, where 
+`source` is a regular expression, and target is the URL to redirect to.
 
 For example:
 
 ```
-REDIRECT1=example.com==https://www.google.com
+REDIRECT1=.*\.example\.com==https://www.google.com
 ```
 
 By default, the redirect is a Temporary Redirect (302). To use a Permanent 
@@ -37,8 +38,8 @@ REDIRECT1=example.com==!https://www.google.com
 
 ```
 $ docker run --rm -it -p 3000:3000 \
-  -e REDIRECT1=1.local==https://www.google.com \
-  -e REDIRECT2=2.local==https://github.com \
+  -e REDIRECT1=.*\.local==https://www.google.com \
+  -e REDIRECT2=.*\.lvh.me==https://github.com \
   dannyben/redirector
 ```
 
@@ -52,8 +53,8 @@ services:
     image: dannyben/redirector
     ports: ["3000:3000"]
     environment:
-      REDIRECT1: 1.local==!https://www.google.com
-      REDIRECT2: 2.local==https://github.com
+      REDIRECT1: .*\.local==https://www.google.com \
+      REDIRECT2: .*\.lvh.me==https://github.com \
 ```
 
 

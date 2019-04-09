@@ -9,9 +9,10 @@ class Redirector
         .sort.to_h
 
       host = env['SERVER_NAME']
+      match = redirects.select { |key, _value| host =~ /#{key}/ }.first
 
-      if redirects.keys.include? host
-        code, target = 302, redirects[host]
+      if match
+        code, target = 302, match[1]
 
         if target[0] == '!'
           code = 301
