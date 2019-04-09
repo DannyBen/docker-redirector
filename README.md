@@ -36,9 +36,10 @@ REDIRECT1=example.com==!https://www.google.com
 ### Run the Server
 
 ```
-$ REDIRECT1=example.com==https://www.google.com \
-  REDIRECT2=another.com==https://github.com \
-  docker run --rm -it -p 3000:3000 dannyben/redirector
+$ docker run --rm -it -p 3000:3000 \
+  -e REDIRECT1=1.local==https://www.google.com \
+  -e REDIRECT2=2.local==https://github.com \
+  dannyben/redirector
 ```
 
 ### Docker Compose
