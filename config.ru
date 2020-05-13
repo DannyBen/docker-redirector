@@ -22,7 +22,7 @@ class Redirector
         [code, {'Location' => target}, []]
       
       else
-        [404, {'Content-Type' => 'text/plan'}, ['Not Found']]
+        [404, {'Content-Type' => 'text/plain'}, ['Not Found']]
       
       end
     end
