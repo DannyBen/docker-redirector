@@ -1,5 +1,4 @@
-HTTP Redirector Docker Image
-==================================================
+# HTTP Redirector Docker Image
 
 This is a simple docker image to handle domain redirects.
 
@@ -11,8 +10,7 @@ This is a simple docker image to handle domain redirects.
 ---
 
 
-Usage
---------------------------------------------------
+## Usage
 
 ### Configure Redirects
 
