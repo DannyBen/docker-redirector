@@ -1,5 +1,9 @@
 # HTTP Redirector Docker Image
 
+**DEPRECATED** - Use [redirectly](https://github.com/dannyben/redirectly) instead.
+
+---
+
 This is a simple docker image to handle domain redirects.
 
 ---

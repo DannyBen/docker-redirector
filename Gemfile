@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'runfile'
+gem 'puma'
 gem 'rack'
 gem 'rackup'
-gem 'puma'
+gem 'runfile'
+gem 'runfile-tasks'
