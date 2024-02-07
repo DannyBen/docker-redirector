@@ -5,5 +5,5 @@ services:
     ports: ["3000:3000"]
     volumes: ['./config.ru:/app/config.ru']
     environment:
-      REDIRECT1: .*\.local==!https://www.google.com
-      REDIRECT2: .*\.lvh\.me==https://github.com
+      REDIRECT1: .*test\.localhost==!https://www.google.com
+      REDIRECT2: .*code\.localhost==https://github.com

@@ -1,0 +1,9 @@
+title   'Docker Redirector'
+summary 'Developer toolbelt for the docker redirector image'
+
+help   'Start the server'
+usage  '(serve | s) [--port PORT]'
+option '-p, --port PORT', 'Listening port [default: 3000]'
+action :serve, :s do |args|
+  exec "rackup -p #{args['--port']} -o 0.0.0.0"
+end

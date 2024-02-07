@@ -4,7 +4,8 @@ ENV TERM=linux
 WORKDIR /app
 
 RUN apk --no-cache add ruby ruby-etc
-RUN echo 'gem: --no-document' > /etc/gemrc && gem install rack webrick
+RUN echo 'gem: --no-document' > /etc/gemrc && \
+    gem install rack rackup puma
 
 COPY config.ru ./
 

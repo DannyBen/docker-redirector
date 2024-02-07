@@ -44,8 +44,6 @@ $ docker run --rm -it -p 3000:3000 \
 ### Docker Compose
 
 ```yaml
-version: '3'
-
 services:
   web:
     image: dannyben/redirector
@@ -60,4 +58,3 @@ services:
 
 [1]: https://hub.docker.com/r/dannyben/redirector/
 [2]: https://github.com/DannyBen/docker-redirector
-

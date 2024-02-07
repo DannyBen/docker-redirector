@@ -14,10 +14,10 @@ class Redirector
           target = target[1..-1]
         end
         
-        [code, {'Location' => target}, []]
+        [code, {'location' => target}, []]
       
       else
-        [404, {'Content-Type' => 'text/plain'}, ['Not Found']]
+        [404, {'content-type' => 'text/plain'}, ['Not Found']]
       
       end
     end
